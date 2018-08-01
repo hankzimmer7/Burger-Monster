@@ -1,0 +1,7 @@
+body {
+  background-image: url(/assets/images/burger_background.jpg);
+  background-size: 100%;;
+}
+.jumbotron {
+  background-color: rgba(255, 255, 255, 0.8);
+} 
