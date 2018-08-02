@@ -1,7 +1,68 @@
 body {
   background-image: url(/assets/images/burger_background.jpg);
-  background-size: 100%;;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  background-color: black;
+  /* background-position:absolute; */
+  right: 0;
 }
+
 .jumbotron {
   background-color: rgba(255, 255, 255, 0.8);
-} 
+}
+
+h1 {
+  text-align: center;
+  font-size: 7rem;
+  font-family: 'Butcherman', cursive;
+  color: red;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* Large devices (desktops, less than 1200px) */
+
+@media screen and (max-width: 1199.98px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size:1.2rem;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+
+@media screen and (max-width: 991.98px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size:1rem;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media screen and (max-width: 767.98px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media screen and (max-width: 575.98px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Tiny devices */
+
+@media screen and (max-width: 420px) {
+
+}
