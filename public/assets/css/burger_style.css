@@ -1,10 +1,8 @@
 body {
-  background-image: url(/assets/images/burger_background.jpg);
+  background-image: url(/assets/images/bm_background.jpg);
   background-size: 100%;
   background-repeat:no-repeat;
   background-color: black;
-  /* background-position:absolute; */
-  right: 0;
 }
 
 .jumbotron {
@@ -21,6 +19,27 @@ h1 {
 h2 {
   text-align: center;
   font-size: 1.4rem;
+}
+
+a {
+  color: rgb(200, 200, 200);
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background-color: black;
+  height: 60px;
+  padding-top:20px;
+}
+.footer-text {
+  color:white;
+}
+.btn {
+  margin:5px;
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -43,6 +62,10 @@ h2 {
   h2 {
     font-size:1rem;
   }
+  .btn {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -51,6 +74,7 @@ h2 {
   h1 {
     font-size: 3rem;
   }
+
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -64,5 +88,7 @@ h2 {
 /* Tiny devices */
 
 @media screen and (max-width: 420px) {
-
+  a {
+    font-size: .75rem;
+}
 }

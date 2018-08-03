@@ -16,6 +16,16 @@ router.get("/", function (req, res) {
     });
 });
 
+//Router GET function for displaying the burger data as an API if the user desires
+router.get("/api/burgers", function (req, res) {
+    burger.selectAll(function (data) {
+        var burgersList = {
+            burgers: data
+        };
+        res.json(burgersList);
+    });
+    });
+
 //Router POST function for adding a new burger
 router.post("/api/burgers", function (req, res) {
     burger.insertOne(req.body.burger_name, function (result) {
@@ -29,8 +39,6 @@ router.post("/api/burgers", function (req, res) {
 //Router PUT function for updating a burger to devoured
 router.put("/api/burgers/:id", function (req, res) {
     var condition = "id = " + req.params.id;
-
-    console.log("condition", condition);
 
     burger.updateOne(condition, function (result) {
         if (result.changedRows == 0) {

@@ -3,11 +3,11 @@ var connection = require("../config/connection.js");
 
 // Object for all our SQL statement functions.
 var orm = {
-  
+
   //SelectAll function for selecting and displaying all of the burgers
-  selectAll: function(table, cb) {
+  selectAll: function (table, cb) {
     var queryString = "SELECT * FROM " + table + ";";
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
@@ -16,7 +16,7 @@ var orm = {
   },
 
   //InsertOne function for adding a new burger
-  insertOne: function(table, cols, value, cb) {
+  insertOne: function (table, cols, value, cb) {
     var queryString = "INSERT INTO " + table;
     queryString += " (";
     queryString += cols.toString();
@@ -25,7 +25,7 @@ var orm = {
 
     console.log(queryString);
 
-    connection.query(queryString, value, function(err, result) {
+    connection.query(queryString, value, function (err, result) {
       if (err) {
         throw err;
       }
@@ -35,7 +35,7 @@ var orm = {
   },
 
   //UpdateOne function for moving a burger to the devoured section
-  updateOne: function(table, value, condition, cb) {
+  updateOne: function (table, value, condition, cb) {
     var queryString = "UPDATE " + table;
 
     queryString += " SET ";
@@ -44,7 +44,7 @@ var orm = {
     queryString += condition;
 
     console.log(queryString);
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
